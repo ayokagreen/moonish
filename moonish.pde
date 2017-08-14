@@ -1,6 +1,6 @@
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/68154*@* */
 /* !do not delete the line above, required for linking your tweak if you upload again */
-int radius = 900;  
+int radius = 400;  
 
 /*Create the arrays for x position and y position of points around our circle */
 float [] xPos = new float [360];  
@@ -9,7 +9,7 @@ color randomColor = color(random(255),random(255),random(255));
 
 
 void setup() {       
-  size(2000, 2000);      
+  size(800, 800);      
   smooth();          
   background(20);  
 noFill();  
@@ -35,9 +35,9 @@ void draw() {
     int random3= (int)random(359); //choose random coordinates for control point 1
     int random4= (int)random(359); //choose random coordinates for control point 2
 
-    //line(xPos[random1], yPos[random1], xPos[random2], yPos[random2]); //draw line from point A to point B
+    line(xPos[random1], yPos[random1], xPos[random2], yPos[random2]); //draw line from point A to point B
     //bezier(xPos[random1], yPos[random1], xPos[random3], yPos[random3], xPos[random4], yPos[random4], xPos[random2], yPos[random2]);
-    bezier(xPos[random1], yPos[random1], random(width), random(height), random(width), random(height), xPos[random2], yPos[random2]);
+    //bezier(xPos[random1], yPos[random1], random(width), random(height), random(width), random(height), xPos[random2], yPos[random2]);
 
   }
   stroke(20);
